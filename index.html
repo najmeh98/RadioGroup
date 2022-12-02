@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind-shopping-landing</title>
+    <link href="/public/build/tailwind.css" rel="stylesheet" />
+</head>
+
+<body class="flex  items-center justify-center h-screen bg-blue-600">
+
+    <div x-data="{radio: 1 , activeClass: 'ring-4 ring-blue-300 bg-blue-400 text-white'}"
+        class="max-w-md w-full  flex flex-col  gap-y-3 ">
+
+
+        <!-- item 1 -->
+
+        <div @click="radio = 1" :class="radio === 1 ? activeClass : '' "
+            class=" p-4 rounded-xl bg-white cursor-pointer text-gray-900">
+
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="mb-2 font-bold text-lg">
+                        Startup
+                    </p>
+                    <span class="font-light text-sm">
+                        12GB/6 CPUs . 160 GB SSD disk
+                    </span>
+
+                </div>
+
+
+                <div x-show="radio === 1"
+                    class="w-8 h-8 rounded-full flex items-center bg-blue-600 justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                        stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- item 2 -->
+
+        <div @click="radio = 2" :class="radio === 2 ? activeClass : '' "
+            class=" p-4 rounded-lg bg-white cursor-pointer text-gray-900">
+
+            <div class="flex items-center justify-between ">
+                <div>
+
+                    <p class="mb-2 font-bold text-lg">
+                        Startup
+                    </p>
+                    <span class="font-light text-sm">
+                        12GB/6 CPUs . 160 GB SSD disk
+                    </span>
+
+                </div>
+
+                <div x-show="radio === 2"
+                    class="w-8 h-8 rounded-full flex items-center bg-blue-600 justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                        stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- item 3 -->
+
+        <div @click="radio = 3" :class="radio === 3 ? activeClass : '' "
+            class="p-4 rounded-lg bg-white cursor-pointer text-gray-900">
+
+            <div class="flex items-center justify-between ">
+                <div>
+                    <p class="mb-2 font-bold text-lg">
+                        Startup
+                    </p>
+                    <span class="font-light text-sm">
+                        12GB/6 CPUs . 160 GB SSD disk
+                    </span>
+                </div>
+
+
+                <div x-show="radio === 3"
+                    class="w-8 h-8 rounded-full flex items-center bg-blue-600 justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                        stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
